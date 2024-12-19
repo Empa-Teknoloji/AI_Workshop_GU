@@ -5,15 +5,15 @@
 
 ## Demo: ST Platformları İçin Edge-AI Çözümleri Geliştirme
 
-Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştilecek "El Karakterleri Tanıma" uygulamamızın geliştirme adımlarında size rehberlik edecektir.
+Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştilecek "El Karakteri Tanıma" demomuzun geliştirme adımlarında size rehberlik edecektir.
 
-Aktivite içeriği olan "El Karakteri Tanıma" uygulaması,  workshop için Empa Electronics tarafından tasarlanmış ve üretilmiş Kafa Kart (_Mind Board_) kullanılarak gerçekleştirilecektir. Kart üzerindeki ivmeölçer ve jiroskop sensörlerinden alınan toplam 6 eksenli sensör ölçümleri, bir yapay zeka modeline girdi olarak kullanılacak ve uç birim (Kafa Kart) üzerinde 6 farklı el karakterini sınıflandırmak amacıyla kullanılacaktır. Kafa kartın elde tutulmasıyla gerçekleştirilecek el karakterleri görsel ile açıklanmıştır.
+Demo içeriği olan "El Karakteri Tanıma" uygulaması,  workshop için Empa Electronics tarafından tasarlanmış ve üretilmiş Kafa Kart (_Mind Board_) kullanılarak gerçekleştirilecektir. Kart üzerindeki ivmeölçer ve jiroskop sensörlerinden alınan toplam 6 eksenli sensör ölçümleri, bir yapay zeka modeline girdi olarak kullanılacak ve uç birim (Kafa Kart) üzerinde 6 farklı el karakterini sınıflandırmak amacıyla kullanılacaktır. Kafa kartın elde tutulmasıyla gerçekleştirilecek el karakterleri görsel ile açıklanmıştır.
 
 <img src="./Additionals/Hand-Characters.png" alt="Accelerator Workshops" width="800"/> 
 
 ## Uygulama
-### ↳ [Google Colab üzerinde STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma](Uygulama_train_hand_character_recognition.ipynb)
-Aktivite içeriği olan "uçta yapay zeka" uygulamasının Google Colab üzerindeki geliştirme adımlarını içerir.
+### ↳ [Google Colab üzerinde STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma](https://colab.research.google.com/drive/1pfd_9qnLD5NGn-R2M1WAIx-leZCaGYzL)
+Demo içeriği olan "uçta yapay zeka" uygulamasının Google Colab üzerindeki geliştirme adımlarını içerir.
 
 ## ST Platformlarında Uçta Yapay Zeka
 
