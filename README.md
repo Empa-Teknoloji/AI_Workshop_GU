@@ -54,7 +54,7 @@ Workshop Repository
 ## Ön Gereksinimler - Checklist
 Etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonrası hazırladığımız checklist ile gereksinimlerin kontrolünü sağlayabilirsiniz.
 
-**Canlı Demo (Teknik Seminer, Kurulum Gerekli Değildir)**
+**Canlı Demo (Teknik Seminer, Kurulum Gerekli Değildir!)**
 - [ ] Python3.8
 - [ ] Docker
 - [ ] Vitis-AI Docker Container Ortamı
@@ -71,6 +71,9 @@ Etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonrası hazı
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-2: 19 Aralık 2024  
+Aktivite-1 şeması eklendi, Aktivite-2 kurulum adımlarını içeren kaynak dosyaları paylaşıldı.
+
 Versiyon-1: 18 Aralık 2024  
 Tüm aktiviteler için temel bileşenleri içeren kılavuzlar repository içerisinde paylaşıldı.
 ```

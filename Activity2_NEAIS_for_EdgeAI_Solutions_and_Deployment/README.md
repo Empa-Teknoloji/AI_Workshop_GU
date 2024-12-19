@@ -3,9 +3,9 @@
     style="display: block; margin: 0 auto"/>
 </p>
 
-# 2) NanoEdge AI Studio ile Edge-AI Çözümleri Geliştirme
+# 2) NanoEdge AI Studio ile Uçta Yapay Zeka Çözümleri Geliştirme
 Empa Electronics tarafından düzenlenen Accelerator Workshops serimizin "Gazi Üniversitesi Uçta Yapay Zeka Çalıştayı" adımına hoşgeldiniz.
-Bu kılavuz, NanoEdge AI Studio kullanılarak geliştilecek "El Karakterleri Tanıma" uygulamamızın geliştirme adımlarında size rehberlik edecektir.
+Bu kılavuz, NanoEdge AI Studio kullanılarak geliştilecek "El Karakteri Sınıflandırma" uygulamamızın geliştirme adımlarında size rehberlik edecektir.
 
 ## Kurulum
 Öncelikle, aşağıdaki bağlantıyı kullanarak çalışma ortamı kurulum adımlarını takip ediniz.
