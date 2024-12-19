@@ -38,7 +38,7 @@ Repository içerisindeki her bir klasör, etkinliğimizde yer alacak uygulamalar
 
 ```
 Workshop Repository
-├── Activity1_Sensor_Connectivity_with_MQTT
+├── Activity1_Sensor_Connectivity_and_MQTT
 │   ├── Kaynak Kod & Materyaller
 │   └── README.md (Aktivite-1 Kılavuzu)
 │ 
