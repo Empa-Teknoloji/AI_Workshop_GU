@@ -110,9 +110,7 @@ NanoEdge AI Studio, sürecin hemen her kısmı için kullanıcılara **ipuçlar�
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled1.jpg)
 
-- **Target** Sensor Model - **Hedef** Sensör Modeli
-    - Kullanıcı, yapay zeka modelini gömmek için hedef sensör modelini seçmelidir.
-- **Sensor** **Type** - **Sensör** **Türü**
+- **Sensor Type (Sensör Türü)**
     - Akım, 1 Eksen
     - Mikrofon, 1 Eksen
     - İvmeölçer, 1-2-3 Eksen
@@ -121,10 +119,10 @@ NanoEdge AI Studio, sürecin hemen her kısmı için kullanıcılara **ipuçlar�
         - Sensör türü yukarıdaki listede yoksa veya birden fazla sensör kullanılıyorsa, kullanıcılar **generic** seçeneğini seçmelidir.
     - Multisensor:
         - **Sadece anomali tespit projelerinde**, Multisensor seçeneği, tipik olarak zaman içinde yavaşça değişen makine durumlarını izlemek için kullanılır. Bu durumlar, **farklı sensör kaynaklarından** gelen değişkenlerle ve/veya sinyal bufferlarının yapay, üst düzey özelliklere dönüştürülmesiyle elde edilebilir.
-- **Number of Axes / Variables** - **Eksen / Değişken Sayısı**
-    - **ÖNEMLİ:** NEAIS, sütun sayısını eksen sayısına bölerek veride kullanılan örnek sayısını kontrol eder. (Örneğin, 3 eksen ivmeölçer ve 3 eksen jiroskop veri toplamak için kullanılıyor ise ve veri 128 adet okumayı kullanılarak örneklendirildiyse, bir satır veri 128 örnek * 6 eksen = 768 sütundan oluşur.)
-    - Bu seçenek, Sensör Türü Generic veya Multisensor değilse pasif olacak gözükecektir.
-- Modelin (Kütüphanenin) **maksimum RAM** & **maksimum Flash** değerleri.
+- **Number of Axes / Variables (Eksen / Değişken Sayısı)**
+    - **ÖNEMLİ:** NEAIS, sütun sayısını eksen sayısına bölerek veride kullanılan örnek sayısını kontrol eder. (Örneğin, veri toplamak için 3 eksen ivmeölçer ve 3 eksen jiroskop kullanılıyor ise ve veri 128 adet okumayı gruplayarak örneklendirildiyse, bir satır veri 128 örnek * 6 eksen = 768 sütundan oluşur.)
+    - Bu seçenek, Sensör Türü Generic veya Multisensor olarak seçilmediyse pasif gözükecektir.
+- Modelin (kütüphanenin) **maksimum RAM** & **maksimum Flash** değerleri.
     
 
 ### 3.2. Sinyaller:
@@ -143,27 +141,24 @@ NanoEdge AI Studio, sürecin hemen her kısmı için kullanıcılara **ipuçlar�
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled5.png)
 
-- **SD Karttan**
-    - Şu an için, SD Kart seçeneği sadece **From File** seçeneği ile yapılabilir durumdadır.
-
 **Veriyi içe aktardıktan sonra:**
 
 - Eksenler, verinin sütunlarıdır (features).
-- Veri uygunsa, NanoEdge AI Studio verilere **Fourier Dönüşümü** uygular, böylece sinyaller Frekans Domain'inde görülebilir.
+- Veri uygunsa, NanoEdge AI Studio verilere **Fourier Dönüşümü** uygularak Frekans Domain'indeki karakteristiklerini görülebilir hale getirir.
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled6.jpg)
 
-- Kullanıcı giriş sinyallerinden **istenmeyen frekans** bileşenlerini **kaldırmak** istiyorsa, **Filtre**yi açabilir. Sinyalleri belirli bir frekans penceresine sınırlandırmak için kesilecek frekansları seçebilir.
+- Kullanıcı giriş sinyallerinden **istenmeyen frekans** bileşenlerini **filtrelemek** istiyorsa, **Filtre**yi açabilir. Sinyalleri belirli bir frekans penceresine sınırlandırmak için kesilecek frekansları seçebilir.
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled7.png)
 
 ### 3.3. Benchmark (Model Eğitimi ve Performansı)
 
-Bu bölümde, **seçili sinyaller (sınıflar)** ve **benchmark için kullanılacak CPU çekirdek sayısı** seçenekleri işaretlenerek  benchmark başlatılabilir.
+Bu bölümde, eğitimde kullanılacak **sinyaller (sınıflar)** ve **CPU çekirdek sayısı** seçenekleri işaretlenerek  benchmark başlatılabilir.
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled8.jpg)
 
-Bu pencerede, seçilecek **her veri ayrı bir sınıf olarak kabul edilir!**
+Bu pencerede, seçilecek **her veri, ayrı bir sınıf olarak kabul edilir!**
 
 Başlat düğmesine tıkladıktan birkaç saniye sonra benchmark başlayacaktır.
 
@@ -171,13 +166,13 @@ Başlat düğmesine tıkladıktan birkaç saniye sonra benchmark başlayacaktır
 
 Benchmark ekranında kullanıcı şunları görür:
 - Benchmark'ın **durumu**,
-- Benchmark'ın **ilerlemesi** ve zaman etiketleri,
+- Benchmark'ın **ilerleyişi** ve zaman etiketleri,
 - **Performans** göstergeleri,
 - **Log** penceresi (Benchmark durumu, çekirdek başına arama hızı, bulunan yeni kütüphaneler, vb.),
-- Zaman içinde **performansın gelişimi**,
+- Zaman içinde **performanstaki gelişim**,
 - **Duraklat** ve **Durdur** düğmeleri.
 
-Benchmark'tan sonra, kullanıcılar eğitilen tüm kütüphanelerden birini **seçme** seçeneğine sahiptir. Bunun amacı farklı performans öncelikleri olan kullanıcıların isteklerine uygun modelleri seçmelerini sağlamaktır.
+Benchmark'tan sonra, kullanıcılar eğitilen tüm kütüphanelerden birini **seçme** seçeneğine sahiptir. Bunun amacı, farklı performans öncelikleri olan kullanıcıların isteklerine uygun modelleri seçmelerini sağlamaktır.
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled10.jpg)
 
@@ -198,6 +193,6 @@ Modeli **doğrudan NanoEdge AI Studio içinde emüle etmeyi** sağlar.
 ### 3.6. Deployment - Model Kütüphanesi Elde Etme
 
 - Kullanıcılar, **eğitilmiş model kütüphanesini** ve C kodu örneklerini **Compile Library (kütüphaneyi derle)** düğmesi ile bilgisayarlarına kaydedebilirler.
-- Ekranın sağında bulunan kod örneği, modeli hedef MCU'da kullanmak için bir kılavuz görevi görür.
+- Ekranın sağında bulunan kod örneği, modeli hedef MCU veya ISPU'da kullanmak için bir başlangıç kılavuzu görevi görür.
 
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled14.jpg)
