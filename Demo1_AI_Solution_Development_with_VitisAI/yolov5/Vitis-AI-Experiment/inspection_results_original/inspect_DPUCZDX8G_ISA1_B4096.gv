@@ -1,0 +1,1782 @@
+digraph DetectMultiBackend {
+	16184 [label="type:nndct_const
+name:DetectMultiBackend::16184
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	16186 [label="type:nndct_const
+name:DetectMultiBackend::16186
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	16188 [label="type:nndct_const
+name:DetectMultiBackend::16188
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	16172 [label="type:nndct_const
+name:DetectMultiBackend::16172
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	16174 [label="type:nndct_const
+name:DetectMultiBackend::16174
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	16176 [label="type:nndct_const
+name:DetectMultiBackend::16176
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	16160 [label="type:nndct_const
+name:DetectMultiBackend::16160
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	16162 [label="type:nndct_const
+name:DetectMultiBackend::16162
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	16164 [label="type:nndct_const
+name:DetectMultiBackend::16164
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	16158 [label="type:nndct_const
+name:DetectMultiBackend::16158
+assigned device:dpu
+out shape:[[3, 2]]" color=blue]
+	16170 [label="type:nndct_const
+name:DetectMultiBackend::16170
+assigned device:dpu
+out shape:[[3, 2]]" color=blue]
+	16182 [label="type:nndct_const
+name:DetectMultiBackend::16182
+assigned device:dpu
+out shape:[[3, 2]]" color=blue]
+	16180 [label="type:nndct_const
+name:DetectMultiBackend::16180
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	16168 [label="type:nndct_const
+name:DetectMultiBackend::16168
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	16156 [label="type:nndct_const
+name:DetectMultiBackend::16156
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	input_0 [label="type:nndct_input
+name:DetectMultiBackend::input_0
+assigned device:user
+out shape:[[1, 960, 540, 3]]" color=black]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3
+assigned device:dpu
+out shape:[[1, 480, 270, 32]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3_sink_transpose_0" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3_sink_transpose_0
+assigned device:cpu
+out shape:[[1, 32, 480, 270]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512
+assigned device:cpu
+out shape:[[1, 32, 480, 270]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512_swim_transpose_0" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512_swim_transpose_0
+assigned device:cpu
+out shape:[[1, 480, 270, 32]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5
+assigned device:dpu
+out shape:[[1, 240, 135, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5_sink_transpose_1" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5_sink_transpose_1
+assigned device:cpu
+out shape:[[1, 64, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533
+assigned device:cpu
+out shape:[[1, 64, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533_swim_transpose_4" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533_swim_transpose_4
+assigned device:cpu
+out shape:[[1, 240, 135, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7
+assigned device:dpu
+out shape:[[1, 240, 135, 32]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7_sink_transpose_2" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7_sink_transpose_2
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554_swim_transpose_6" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554_swim_transpose_6
+assigned device:cpu
+out shape:[[1, 240, 135, 32]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9
+assigned device:dpu
+out shape:[[1, 240, 135, 32]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9_sink_transpose_3" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9_sink_transpose_3
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575_swim_transpose_3" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575_swim_transpose_3
+assigned device:cpu
+out shape:[[1, 240, 135, 32]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11
+assigned device:dpu
+out shape:[[1, 240, 135, 32]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11_sink_transpose_4" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11_sink_transpose_4
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596_swim_transpose_7" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596_swim_transpose_7
+assigned device:cpu
+out shape:[[1, 240, 135, 32]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/ret.13" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/ret.13
+assigned device:dpu
+out shape:[[1, 240, 135, 32]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15
+assigned device:dpu
+out shape:[[1, 240, 135, 32]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15_sink_transpose_5" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15_sink_transpose_5
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620
+assigned device:cpu
+out shape:[[1, 32, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620_swim_transpose_5" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620_swim_transpose_5
+assigned device:cpu
+out shape:[[1, 240, 135, 32]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/ret.17" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/ret.17
+assigned device:dpu
+out shape:[[1, 240, 135, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19
+assigned device:dpu
+out shape:[[1, 240, 135, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19_sink_transpose_6" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19_sink_transpose_6
+assigned device:cpu
+out shape:[[1, 64, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645
+assigned device:cpu
+out shape:[[1, 64, 240, 135]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645_swim_transpose_8" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645_swim_transpose_8
+assigned device:cpu
+out shape:[[1, 240, 135, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21
+assigned device:dpu
+out shape:[[1, 120, 68, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21_sink_transpose_7" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21_sink_transpose_7
+assigned device:cpu
+out shape:[[1, 128, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666
+assigned device:cpu
+out shape:[[1, 128, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666_swim_transpose_15" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666_swim_transpose_15
+assigned device:cpu
+out shape:[[1, 120, 68, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23_sink_transpose_8" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23_sink_transpose_8
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687_swim_transpose_12" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687_swim_transpose_12
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25_sink_transpose_9" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25_sink_transpose_9
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708_swim_transpose_11" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708_swim_transpose_11
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27_sink_transpose_10" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27_sink_transpose_10
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729_swim_transpose_13" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729_swim_transpose_13
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/ret.29" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/ret.29
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31_sink_transpose_11" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31_sink_transpose_11
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753_swim_transpose_14" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753_swim_transpose_14
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33_sink_transpose_12" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33_sink_transpose_12
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774_swim_transpose_17" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774_swim_transpose_17
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/ret.35" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/ret.35
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37_sink_transpose_13" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37_sink_transpose_13
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798_swim_transpose_16" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798_swim_transpose_16
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/ret.39" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/ret.39
+assigned device:dpu
+out shape:[[1, 120, 68, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41
+assigned device:dpu
+out shape:[[1, 120, 68, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41_sink_transpose_14" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41_sink_transpose_14
+assigned device:cpu
+out shape:[[1, 128, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823
+assigned device:cpu
+out shape:[[1, 128, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823_swim_transpose_50" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823_swim_transpose_50
+assigned device:cpu
+out shape:[[1, 120, 68, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43
+assigned device:dpu
+out shape:[[1, 60, 34, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43_sink_transpose_15" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43_sink_transpose_15
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844_swim_transpose_27" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844_swim_transpose_27
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45_sink_transpose_16" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45_sink_transpose_16
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865_swim_transpose_22" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865_swim_transpose_22
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47_sink_transpose_17" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47_sink_transpose_17
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886_swim_transpose_21" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886_swim_transpose_21
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49_sink_transpose_18" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49_sink_transpose_18
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907_swim_transpose_23" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907_swim_transpose_23
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/ret.51" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/ret.51
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53_sink_transpose_19" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53_sink_transpose_19
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931_swim_transpose_24" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931_swim_transpose_24
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55_sink_transpose_20" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55_sink_transpose_20
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952_swim_transpose_25" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952_swim_transpose_25
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/ret.57" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/ret.57
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59_sink_transpose_21" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59_sink_transpose_21
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976_swim_transpose_26" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976_swim_transpose_26
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61_sink_transpose_22" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61_sink_transpose_22
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997_swim_transpose_29" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997_swim_transpose_29
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/ret.63" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/ret.63
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65_sink_transpose_23" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65_sink_transpose_23
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021_swim_transpose_28" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021_swim_transpose_28
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/ret.67" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/ret.67
+assigned device:dpu
+out shape:[[1, 60, 34, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69
+assigned device:dpu
+out shape:[[1, 60, 34, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69_sink_transpose_24" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69_sink_transpose_24
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046_swim_transpose_43" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046_swim_transpose_43
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71
+assigned device:dpu
+out shape:[[1, 30, 17, 512]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71_sink_transpose_25" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71_sink_transpose_25
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067_swim_transpose_34" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067_swim_transpose_34
+assigned device:cpu
+out shape:[[1, 30, 17, 512]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73_sink_transpose_26" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73_sink_transpose_26
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088_swim_transpose_36" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088_swim_transpose_36
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75_sink_transpose_27" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75_sink_transpose_27
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109_swim_transpose_33" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109_swim_transpose_33
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77_sink_transpose_28" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77_sink_transpose_28
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130_swim_transpose_37" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130_swim_transpose_37
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/ret.79" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/ret.79
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81_sink_transpose_29" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81_sink_transpose_29
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154_swim_transpose_35" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154_swim_transpose_35
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/ret.83" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/ret.83
+assigned device:dpu
+out shape:[[1, 30, 17, 512]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85
+assigned device:dpu
+out shape:[[1, 30, 17, 512]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85_sink_transpose_30" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85_sink_transpose_30
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179_swim_transpose_38" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179_swim_transpose_38
+assigned device:cpu
+out shape:[[1, 30, 17, 512]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87_sink_transpose_31" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87_sink_transpose_31
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200_swim_transpose_40" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200_swim_transpose_40
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14215" [label="type:nndct_maxpool
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14215
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14231" [label="type:nndct_maxpool
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14231
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14247" [label="type:nndct_maxpool
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14247
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89
+assigned device:dpu
+out shape:[[1, 30, 17, 1024]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91
+assigned device:dpu
+out shape:[[1, 30, 17, 512]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91_sink_transpose_32" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91_sink_transpose_32
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273_swim_transpose_41" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273_swim_transpose_41
+assigned device:cpu
+out shape:[[1, 30, 17, 512]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93_sink_transpose_33" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93_sink_transpose_33
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294_swim_transpose_64" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294_swim_transpose_64
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/ret.95" [label="type:nndct_resize
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/ret.95
+assigned device:dpu
+out shape:[[1, 60, 34, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/ret.97" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/ret.97
+assigned device:dpu
+out shape:[[1, 60, 34, 512]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99_sink_transpose_34" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99_sink_transpose_34
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325_swim_transpose_44" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325_swim_transpose_44
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101_sink_transpose_35" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101_sink_transpose_35
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346_swim_transpose_45" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346_swim_transpose_45
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103_sink_transpose_36" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103_sink_transpose_36
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367_swim_transpose_46" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367_swim_transpose_46
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105_sink_transpose_37" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105_sink_transpose_37
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388_swim_transpose_47" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388_swim_transpose_47
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/ret.107" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/ret.107
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109
+assigned device:dpu
+out shape:[[1, 60, 34, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109_sink_transpose_38" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109_sink_transpose_38
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413_swim_transpose_48" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413_swim_transpose_48
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111_sink_transpose_39" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111_sink_transpose_39
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434_swim_transpose_57" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434_swim_transpose_57
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/ret.113" [label="type:nndct_resize
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/ret.113
+assigned device:dpu
+out shape:[[1, 120, 68, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/ret.115" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/ret.115
+assigned device:dpu
+out shape:[[1, 120, 68, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117_sink_transpose_40" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117_sink_transpose_40
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465_swim_transpose_51" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465_swim_transpose_51
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119_sink_transpose_41" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119_sink_transpose_41
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486_swim_transpose_52" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486_swim_transpose_52
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121_sink_transpose_42" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121_sink_transpose_42
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507_swim_transpose_53" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507_swim_transpose_53
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123
+assigned device:dpu
+out shape:[[1, 120, 68, 64]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123_sink_transpose_43" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123_sink_transpose_43
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528
+assigned device:cpu
+out shape:[[1, 64, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528_swim_transpose_54" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528_swim_transpose_54
+assigned device:cpu
+out shape:[[1, 120, 68, 64]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/ret.125" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/ret.125
+assigned device:cpu
+out shape:[[1, 120, 68, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127
+assigned device:dpu
+out shape:[[1, 120, 68, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127_sink_transpose_44" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127_sink_transpose_44
+assigned device:cpu
+out shape:[[1, 128, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553
+assigned device:cpu
+out shape:[[1, 128, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553_swim_transpose_69" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553_swim_transpose_69
+assigned device:cpu
+out shape:[[1, 120, 68, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129_sink_transpose_45" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129_sink_transpose_45
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574_swim_transpose_56" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574_swim_transpose_56
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/ret.131" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/ret.131
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133_sink_transpose_46" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133_sink_transpose_46
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599_swim_transpose_58" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599_swim_transpose_58
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135_sink_transpose_47" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135_sink_transpose_47
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620_swim_transpose_59" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620_swim_transpose_59
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137_sink_transpose_48" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137_sink_transpose_48
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641_swim_transpose_60" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641_swim_transpose_60
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139
+assigned device:dpu
+out shape:[[1, 60, 34, 128]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139_sink_transpose_49" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139_sink_transpose_49
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662
+assigned device:cpu
+out shape:[[1, 128, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662_swim_transpose_61" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662_swim_transpose_61
+assigned device:cpu
+out shape:[[1, 60, 34, 128]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/ret.141" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/ret.141
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143
+assigned device:dpu
+out shape:[[1, 60, 34, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143_sink_transpose_50" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143_sink_transpose_50
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687
+assigned device:cpu
+out shape:[[1, 256, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687_swim_transpose_70" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687_swim_transpose_70
+assigned device:cpu
+out shape:[[1, 60, 34, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145_sink_transpose_51" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145_sink_transpose_51
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708_swim_transpose_63" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708_swim_transpose_63
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/ret.147" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/ret.147
+assigned device:cpu
+out shape:[[1, 30, 17, 512]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149_sink_transpose_52" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149_sink_transpose_52
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733_swim_transpose_65" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733_swim_transpose_65
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151_sink_transpose_53" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151_sink_transpose_53
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754_swim_transpose_66" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754_swim_transpose_66
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153_sink_transpose_54" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153_sink_transpose_54
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775_swim_transpose_67" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775_swim_transpose_67
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155
+assigned device:dpu
+out shape:[[1, 30, 17, 256]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155_sink_transpose_55" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155_sink_transpose_55
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796
+assigned device:cpu
+out shape:[[1, 256, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796_swim_transpose_68" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796_swim_transpose_68
+assigned device:cpu
+out shape:[[1, 30, 17, 256]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/ret.157" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/ret.157
+assigned device:cpu
+out shape:[[1, 30, 17, 512]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159
+assigned device:dpu
+out shape:[[1, 30, 17, 512]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159_sink_transpose_56" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159_sink_transpose_56
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821" [label="type:aten::silu_
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821
+assigned device:cpu
+out shape:[[1, 512, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821_swim_transpose_71" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821_swim_transpose_71
+assigned device:cpu
+out shape:[[1, 30, 17, 512]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161
+assigned device:dpu
+out shape:[[1, 120, 68, 255]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161_sink_transpose_57" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161_sink_transpose_57
+assigned device:cpu
+out shape:[[1, 255, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.163" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.163
+assigned device:cpu
+out shape:[[1, 3, 85, 120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.165" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.165
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14932" [label="type:nndct_arange
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14932
+assigned device:cpu
+out shape:[[120]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14937" [label="type:nndct_arange
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14937
+assigned device:cpu
+out shape:[[68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14941" [label="type:aten::meshgrid
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14941
+assigned device:cpu
+out shape:[[120, 68], [120, 68]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14945" [label="type:nndct_stack
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14945
+assigned device:cpu
+out shape:[[120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14951" [label="type:nndct_expand
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14951
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16157" [label="type:nndct_elementwise_sub
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16157
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14957" [label="type:nndct_select
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14957
+assigned device:cpu
+out shape:[[3, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16159" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16159
+assigned device:dpu
+out shape:[[3, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14969" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14969
+assigned device:cpu
+out shape:[[1, 3, 1, 1, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14975" [label="type:nndct_expand
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14975
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.171" [label="type:nndct_sigmoid
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.171
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15025" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15025
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15071" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15071
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15117" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15117
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 81]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.181" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.181
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.183" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.183
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.185" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.185
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.187" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.187
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.189" [label="type:aten::pow
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.189
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.191" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.191
+assigned device:dpu
+out shape:[[1, 3, 120, 68, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.193" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.193
+assigned device:cpu
+out shape:[[1, 3, 120, 68, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.199" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.199
+assigned device:cpu
+out shape:[[1, 24480, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201
+assigned device:dpu
+out shape:[[1, 60, 34, 255]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201_sink_transpose_58" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201_sink_transpose_58
+assigned device:cpu
+out shape:[[1, 255, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.203" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.203
+assigned device:cpu
+out shape:[[1, 3, 85, 60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.205" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.205
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15282" [label="type:nndct_arange
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15282
+assigned device:cpu
+out shape:[[60]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15287" [label="type:nndct_arange
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15287
+assigned device:cpu
+out shape:[[34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15291" [label="type:aten::meshgrid
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15291
+assigned device:cpu
+out shape:[[60, 34], [60, 34]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15295" [label="type:nndct_stack
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15295
+assigned device:cpu
+out shape:[[60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15301" [label="type:nndct_expand
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15301
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16169" [label="type:nndct_elementwise_sub
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16169
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15307" [label="type:nndct_select
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15307
+assigned device:cpu
+out shape:[[3, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16171" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16171
+assigned device:dpu
+out shape:[[3, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15318" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15318
+assigned device:cpu
+out shape:[[1, 3, 1, 1, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15324" [label="type:nndct_expand
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15324
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.211" [label="type:nndct_sigmoid
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.211
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15374" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15374
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15420" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15420
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15466" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15466
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 81]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.221" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.221
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.223" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.223
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.225" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.225
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.227" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.227
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.229" [label="type:aten::pow
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.229
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.231" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.231
+assigned device:dpu
+out shape:[[1, 3, 60, 34, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.233" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.233
+assigned device:cpu
+out shape:[[1, 3, 60, 34, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.239" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.239
+assigned device:cpu
+out shape:[[1, 6120, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241
+assigned device:dpu
+out shape:[[1, 30, 17, 255]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241_sink_transpose_59" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241_sink_transpose_59
+assigned device:cpu
+out shape:[[1, 255, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.243" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.243
+assigned device:cpu
+out shape:[[1, 3, 85, 30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.245" [label="type:nndct_permute
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.245
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15631" [label="type:nndct_arange
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15631
+assigned device:cpu
+out shape:[[30]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15636" [label="type:nndct_arange
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15636
+assigned device:cpu
+out shape:[[17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15640" [label="type:aten::meshgrid
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15640
+assigned device:cpu
+out shape:[[30, 17], [30, 17]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15644" [label="type:nndct_stack
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15644
+assigned device:cpu
+out shape:[[30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15650" [label="type:nndct_expand
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15650
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16181" [label="type:nndct_elementwise_sub
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16181
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15656" [label="type:nndct_select
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15656
+assigned device:cpu
+out shape:[[3, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16183" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16183
+assigned device:dpu
+out shape:[[3, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15667" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15667
+assigned device:cpu
+out shape:[[1, 3, 1, 1, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15673" [label="type:nndct_expand
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15673
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.251" [label="type:nndct_sigmoid
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.251
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15723" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15723
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15769" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15769
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15815" [label="type:nndct_strided_slice
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15815
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 81]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.261" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.261
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.263" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.263
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.265" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.265
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.267" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.267
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.269" [label="type:aten::pow
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.269
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 2]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.271" [label="type:nndct_elemwise_mul
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.271
+assigned device:dpu
+out shape:[[1, 3, 30, 17, 2]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.273" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.273
+assigned device:cpu
+out shape:[[1, 3, 30, 17, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.279" [label="type:nndct_reshape
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.279
+assigned device:cpu
+out shape:[[1, 1530, 85]]" color=red]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret
+assigned device:cpu
+out shape:[[1, 32130, 85]]" color=red]
+	return_0 [label="type:nndct_return
+name:DetectMultiBackend::return_0
+assigned device:user
+out shape:[]" color=black]
+	16184 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.261"
+	16186 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.265"
+	16188 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.267"
+	16172 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.221"
+	16174 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.225"
+	16176 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.227"
+	16160 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.181"
+	16162 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.185"
+	16164 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.187"
+	16158 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16159"
+	16170 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16171"
+	16182 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16183"
+	16180 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16181"
+	16168 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16169"
+	16156 -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16157"
+	input_0 -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3_sink_transpose_0"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/ret.3_sink_transpose_0" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512_swim_transpose_0"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/SiLU[act]/13512_swim_transpose_0" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5_sink_transpose_1"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/ret.5_sink_transpose_1" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533_swim_transpose_4"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533_swim_transpose_4" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/SiLU[act]/13533_swim_transpose_4" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7_sink_transpose_2"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/ret.7_sink_transpose_2" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554_swim_transpose_6"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554_swim_transpose_6" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/ret.13"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/SiLU[act]/13554_swim_transpose_6" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9_sink_transpose_3"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.9_sink_transpose_3" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575_swim_transpose_3"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13575_swim_transpose_3" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11_sink_transpose_4"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.11_sink_transpose_4" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596_swim_transpose_7"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13596_swim_transpose_7" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/ret.13"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/ret.13" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/ret.17"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15_sink_transpose_5"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/ret.15_sink_transpose_5" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620_swim_transpose_5"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/SiLU[act]/13620_swim_transpose_5" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/ret.17"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/ret.17" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19_sink_transpose_6"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/ret.19_sink_transpose_6" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645_swim_transpose_8"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/SiLU[act]/13645_swim_transpose_8" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21_sink_transpose_7"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/ret.21_sink_transpose_7" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666_swim_transpose_15"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666_swim_transpose_15" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/SiLU[act]/13666_swim_transpose_15" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23_sink_transpose_8"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/ret.23_sink_transpose_8" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687_swim_transpose_12"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687_swim_transpose_12" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/ret.29"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/SiLU[act]/13687_swim_transpose_12" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25_sink_transpose_9"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.25_sink_transpose_9" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708_swim_transpose_11"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13708_swim_transpose_11" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27_sink_transpose_10"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.27_sink_transpose_10" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729_swim_transpose_13"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13729_swim_transpose_13" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/ret.29"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/ret.29" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/ret.29" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/ret.35"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31_sink_transpose_11"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.31_sink_transpose_11" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753_swim_transpose_14"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13753_swim_transpose_14" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33_sink_transpose_12"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.33_sink_transpose_12" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774_swim_transpose_17"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13774_swim_transpose_17" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/ret.35"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/ret.35" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/ret.39"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37_sink_transpose_13"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/ret.37_sink_transpose_13" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798_swim_transpose_16"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/SiLU[act]/13798_swim_transpose_16" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/ret.39"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/ret.39" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41_sink_transpose_14"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/ret.41_sink_transpose_14" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823_swim_transpose_50"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823_swim_transpose_50" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/ret.115"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/SiLU[act]/13823_swim_transpose_50" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43_sink_transpose_15"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/ret.43_sink_transpose_15" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844_swim_transpose_27"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844_swim_transpose_27" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/SiLU[act]/13844_swim_transpose_27" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45_sink_transpose_16"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/ret.45_sink_transpose_16" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865_swim_transpose_22"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865_swim_transpose_22" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/ret.51"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/SiLU[act]/13865_swim_transpose_22" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47_sink_transpose_17"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.47_sink_transpose_17" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886_swim_transpose_21"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/13886_swim_transpose_21" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49_sink_transpose_18"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.49_sink_transpose_18" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907_swim_transpose_23"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/13907_swim_transpose_23" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/ret.51"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/ret.51" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/ret.51" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/ret.57"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53_sink_transpose_19"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/ret.53_sink_transpose_19" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931_swim_transpose_24"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/SiLU[act]/13931_swim_transpose_24" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55_sink_transpose_20"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/ret.55_sink_transpose_20" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952_swim_transpose_25"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/SiLU[act]/13952_swim_transpose_25" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/ret.57"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/ret.57" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/ret.57" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/ret.63"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59_sink_transpose_21"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/ret.59_sink_transpose_21" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976_swim_transpose_26"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/SiLU[act]/13976_swim_transpose_26" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61_sink_transpose_22"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/ret.61_sink_transpose_22" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997_swim_transpose_29"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/SiLU[act]/13997_swim_transpose_29" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/ret.63"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/ret.63" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/ret.67"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65_sink_transpose_23"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/ret.65_sink_transpose_23" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021_swim_transpose_28"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/SiLU[act]/14021_swim_transpose_28" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/ret.67"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/ret.67" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69_sink_transpose_24"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/ret.69_sink_transpose_24" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046_swim_transpose_43"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046_swim_transpose_43" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/ret.97"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/SiLU[act]/14046_swim_transpose_43" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71_sink_transpose_25"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/ret.71_sink_transpose_25" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067_swim_transpose_34"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067_swim_transpose_34" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/SiLU[act]/14067_swim_transpose_34" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73_sink_transpose_26"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/ret.73_sink_transpose_26" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088_swim_transpose_36"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088_swim_transpose_36" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/ret.79"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/SiLU[act]/14088_swim_transpose_36" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75_sink_transpose_27"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.75_sink_transpose_27" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109_swim_transpose_33"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14109_swim_transpose_33" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77_sink_transpose_28"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.77_sink_transpose_28" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130_swim_transpose_37"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14130_swim_transpose_37" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/ret.79"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/ret.79" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/ret.83"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81_sink_transpose_29"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/ret.81_sink_transpose_29" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154_swim_transpose_35"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/SiLU[act]/14154_swim_transpose_35" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/ret.83"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/ret.83" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85_sink_transpose_30"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/ret.85_sink_transpose_30" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179_swim_transpose_38"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/SiLU[act]/14179_swim_transpose_38" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87_sink_transpose_31"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/ret.87_sink_transpose_31" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200_swim_transpose_40"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200_swim_transpose_40" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/SiLU[act]/14200_swim_transpose_40" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14215"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14215" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14231"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14215" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14231" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14247"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14231" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/14247" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/ret.89" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91_sink_transpose_32"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/ret.91_sink_transpose_32" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273_swim_transpose_41"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/SiLU[act]/14273_swim_transpose_41" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93_sink_transpose_33"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/ret.93_sink_transpose_33" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294_swim_transpose_64"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294_swim_transpose_64" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/ret.147"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/SiLU[act]/14294_swim_transpose_64" -> "DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/ret.95"
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/ret.95" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/ret.97"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/ret.97" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/ret.97" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99_sink_transpose_34"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/ret.99_sink_transpose_34" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325_swim_transpose_44"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/SiLU[act]/14325_swim_transpose_44" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101_sink_transpose_35"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.101_sink_transpose_35" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346_swim_transpose_45"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14346_swim_transpose_45" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103_sink_transpose_36"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.103_sink_transpose_36" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367_swim_transpose_46"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14367_swim_transpose_46" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/ret.107"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105_sink_transpose_37"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/ret.105_sink_transpose_37" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388_swim_transpose_47"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/SiLU[act]/14388_swim_transpose_47" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/ret.107"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/ret.107" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109_sink_transpose_38"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/ret.109_sink_transpose_38" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413_swim_transpose_48"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/SiLU[act]/14413_swim_transpose_48" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111_sink_transpose_39"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/ret.111_sink_transpose_39" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434_swim_transpose_57"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434_swim_transpose_57" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/ret.131"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/SiLU[act]/14434_swim_transpose_57" -> "DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/ret.113"
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/ret.113" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/ret.115"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/ret.115" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/ret.115" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117_sink_transpose_40"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/ret.117_sink_transpose_40" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465_swim_transpose_51"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/SiLU[act]/14465_swim_transpose_51" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119_sink_transpose_41"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.119_sink_transpose_41" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486_swim_transpose_52"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14486_swim_transpose_52" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121_sink_transpose_42"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.121_sink_transpose_42" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507_swim_transpose_53"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14507_swim_transpose_53" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/ret.125"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123_sink_transpose_43"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/ret.123_sink_transpose_43" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528_swim_transpose_54"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/SiLU[act]/14528_swim_transpose_54" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/ret.125"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/ret.125" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127_sink_transpose_44"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/ret.127_sink_transpose_44" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553_swim_transpose_69"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553_swim_transpose_69" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/SiLU[act]/14553_swim_transpose_69" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129_sink_transpose_45"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/ret.129_sink_transpose_45" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574_swim_transpose_56"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/SiLU[act]/14574_swim_transpose_56" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/ret.131"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/ret.131" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/ret.131" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133_sink_transpose_46"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/ret.133_sink_transpose_46" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599_swim_transpose_58"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/SiLU[act]/14599_swim_transpose_58" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135_sink_transpose_47"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.135_sink_transpose_47" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620_swim_transpose_59"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14620_swim_transpose_59" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137_sink_transpose_48"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.137_sink_transpose_48" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641_swim_transpose_60"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14641_swim_transpose_60" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/ret.141"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139_sink_transpose_49"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/ret.139_sink_transpose_49" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662_swim_transpose_61"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/SiLU[act]/14662_swim_transpose_61" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/ret.141"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/ret.141" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143_sink_transpose_50"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/ret.143_sink_transpose_50" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687_swim_transpose_70"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687_swim_transpose_70" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/SiLU[act]/14687_swim_transpose_70" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145_sink_transpose_51"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/ret.145_sink_transpose_51" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708_swim_transpose_63"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/SiLU[act]/14708_swim_transpose_63" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/ret.147"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/ret.147" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/ret.147" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149_sink_transpose_52"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/ret.149_sink_transpose_52" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733_swim_transpose_65"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/SiLU[act]/14733_swim_transpose_65" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151_sink_transpose_53"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/ret.151_sink_transpose_53" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754_swim_transpose_66"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/SiLU[act]/14754_swim_transpose_66" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153_sink_transpose_54"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/ret.153_sink_transpose_54" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775_swim_transpose_67"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/SiLU[act]/14775_swim_transpose_67" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/ret.157"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155_sink_transpose_55"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/ret.155_sink_transpose_55" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796_swim_transpose_68"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/SiLU[act]/14796_swim_transpose_68" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/ret.157"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/ret.157" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159_sink_transpose_56"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/ret.159_sink_transpose_56" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821_swim_transpose_71"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/SiLU[act]/14821_swim_transpose_71" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161_sink_transpose_57"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/ret.161_sink_transpose_57" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.163"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.163" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.165"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.165" -> return_0
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.165" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.171"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14932" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14941"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14937" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14941"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14941" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14945"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14941" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14945"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14945" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14951"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14951" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16157"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16157" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.183"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14957" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16159"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16159" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14969"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14969" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14975"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/14975" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.191"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.171" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15025"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.171" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15071"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.171" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15117"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15025" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.181"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15071" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.187"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15117" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.193"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.181" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.183"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.183" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.185"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.185" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.193"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.187" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.189"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.189" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.191"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.191" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.193"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.193" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.199"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.199" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201_sink_transpose_58"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/ret.201_sink_transpose_58" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.203"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.203" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.205"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.205" -> return_0
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.205" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.211"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15282" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15291"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15287" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15291"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15291" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15295"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15291" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15295"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15295" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15301"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15301" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16169"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16169" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.223"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15307" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16171"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16171" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15318"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15318" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15324"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15324" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.231"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.211" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15374"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.211" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15420"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.211" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15466"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15374" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.221"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15420" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.227"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15466" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.233"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.221" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.223"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.223" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.225"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.225" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.233"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.227" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.229"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.229" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.231"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.231" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.233"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.233" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.239"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.239" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241_sink_transpose_59"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/ret.241_sink_transpose_59" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.243"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.243" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.245"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.245" -> return_0
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.245" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.251"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15631" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15640"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15636" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15640"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15640" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15644"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15640" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15644"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15644" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15650"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15650" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16181"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16181" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.263"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15656" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16183"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/16183" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15667"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15667" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15673"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15673" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.271"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.251" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15723"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.251" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15769"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.251" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15815"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15723" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.261"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15769" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.267"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/15815" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.273"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.261" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.263"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.263" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.265"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.265" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.273"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.267" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.269"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.269" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.271"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.271" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.273"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.273" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.279"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret.279" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/ret" -> return_0
+}
