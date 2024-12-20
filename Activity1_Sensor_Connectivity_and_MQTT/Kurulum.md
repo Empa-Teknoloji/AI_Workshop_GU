@@ -2,11 +2,9 @@
     <img src="./Additionals/Empa-Accelerator-Workshops-Template-Banner.jpg" alt="Accelerator Workshops" 
     style="display: block; margin: 0 auto"/>
 </p>
-# EMPA-Workshop-Oncesi-Kurulacaklar
 
-**EMPA Workshop Öncesi Yapılacaklar / Kurulumlar**<br />
-<br />
-Bu dokümantasyonda etkinlik öncesi gerekli programların ve paketlerin kurulumları anlatılacaktır. Kurulması gereken program ve paketler şu şekildedir:
+# Etkinlik Öncesi Yapılacaklar & Kurulumlar
+Bu dokümantasyonda etkinlik öncesi gerekli programların ve paketlerin kurulumları anlatılacaktır. Kurulumu gerekli program ve paketler şu şekildedir:
 
 1. [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
 2. [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)
@@ -14,7 +12,7 @@ Bu dokümantasyonda etkinlik öncesi gerekli programların ve paketlerin kurulum
 4. [TeraTerm](https://github.com/TeraTermProject/teraterm/releases)
 5. SW Paketleri
 
-# 1- STM32CubeIDE Kurulumu
+## 1- STM32CubeIDE Kurulumu
 
 STM32CubeIDE, STM32 mikrodenetleyicileri ve mikroişlemcileri için gerekli çevresel yapılandırmaların yapılmasını, kod oluşturma ve derlemeyi, kodun hata ayıklama işlemlerini ve cihaza yüklenmesini sağlayan Eclipse tabanlı bir C/C++ geliştirme platformudur.
 
@@ -30,7 +28,7 @@ NOT 1: Kurulum yapacağınız hedef klasör yolunda Türkçe karakter ve boşluk
 
 NOT 2: Kurulum sırasında ST-LINK ve SEGGER J-Link sürücülerinin yüklenip yüklenmeyeceği sorulacaktır. Bu sürücüleri seçip yükleme işlemlerine devam ediniz.
 
-# 2- STM32CubeMX Kurulumu
+## 2- STM32CubeMX Kurulumu
 
 STM32CubeMX, STM32 mikrodenetleyicileri ve mikroişlemcileri için model seçimlerinin, başlangıç konfigürasyonlarının ve clock ayarlarının kolayca yapılmasını sağlayan, başlangıç kodlarını oluşturan grafik destekli bir araçtır. Bu araç, adım adım ilerleyen bir süreçle STM32 cihazlarının yapılandırılmasını ve gerekli başlatma C kodunun oluşturulmasını sağlar.
 
@@ -42,7 +40,7 @@ Aşağıdaki seçenekler arasından kendi işletim sisteminiz için uygun olanı
 </div>
 <br />
 
-# 3- STM32CubeProgrammer Kurulumu
+## 3- STM32CubeProgrammer Kurulumu
 
 STM32CubeProgrammer, STM32 mikrodenetleyicileri programlama ve konfigürasyonlarını ayarlamak için tasarlanmış grafiksel bir araçtır.
 <br />Öncelikle STMicroelectronics’in [sitesinden](https://www.st.com/en/development-tools/stm32cubeprog.html) **STM32CubePrg 2.18.0** (en son sürümü indiriniz) versiyonunu indiriniz.
@@ -53,7 +51,7 @@ STM32CubeProgrammer, STM32 mikrodenetleyicileri programlama ve konfigürasyonlar
 </div>
 <br />
 
-# 4- Tera Term Kurulumu
+## 4- Tera Term Kurulumu
 Tera Term, kullanıcıların seri port iletişimi sağlayarak uzak bilgisayarlara erişmelerine ve UART gibi çeşitli iletişim protokolleri aracılığıyla cihazlarla iletişim kurmalarına olanak tanır. Bilgisayar ile geliştirme kartı arasında UART üzerinden iletişim sağlamak için bu program kullanılacaktır.
 Github [sayfasından](https://github.com/TeraTermProject/teraterm/releases) Assets altından dosyasını indiriniz ve kurulumu gerçekleştiriniz.<br />
 <div align="center">
@@ -61,7 +59,7 @@ Github [sayfasından](https://github.com/TeraTermProject/teraterm/releases) Asse
 </div>
 <br />
 
-# 5- SW Paketlerinin Kurulumu
+## 5- SW Paketlerinin Kurulumu
 
 
 Uygulamalarda STM32U5 ailesinden bir mikrodenetleyici kullanılacağı için U5 paketlerinin indirilmesi gereklidir.<br />
