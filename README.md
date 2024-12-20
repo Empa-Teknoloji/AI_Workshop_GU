@@ -25,7 +25,7 @@ Yapay zeka çözümlerinin FPGA tabanlı AMD platformlarında kullanımının uy
 ## Çalıştay Aktiviteleri - Gazi Üniversitesi Uçta Yapay Zeka Çalıştayı (25 Aralık)
 Uçta Yapay Zeka workshop etkinliğimizde gerçekleştirilecek aktivitelerde kullanılacak çalışma ortamları ve gerekli kurulumlar için sırasıyla her bir aktivite için oluşturulan kurulum kılavuzlarına giderek gerekli adımları uygulayınız. 
 
-### ↳ [1) <MQTT Uygulama Adı>](Activity1_Sensor_Connectivity_and_MQTT)
+### ↳ [1) Uçtan Uca MQTT Veri Toplayıcı](Activity1_Sensor_Connectivity_and_MQTT)
 <MQTT ve sensor uygulaması tanım paragrafı>   
 Bu aktivite, kullanıcıların katılımıyla interaktif olarak gerçekleştirilecektir.
 
@@ -70,6 +70,9 @@ Etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonrası hazı
 
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
+```
+Versiyon-3: 20 Aralık 2024  
+Gömülü tarafta gereken kurulum dosyaları Aktşvşte-1 içerisine eklendi.
 ```
 Versiyon-2: 19 Aralık 2024  
 Aktivite-1 şeması eklendi, Aktivite-2 kurulum adımlarını içeren kaynak dosyaları paylaşıldı.

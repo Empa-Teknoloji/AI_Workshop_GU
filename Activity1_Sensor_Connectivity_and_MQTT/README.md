@@ -13,7 +13,7 @@ Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarl
 Aktivite için gerekli program ve gereçlerin kurulum adımlarını içerir.
 
 ## Uygulama
-### ↳ [<MQTT Uygulama Adı>](Uygulama.exe)
+### ↳ [Uçtan Uca MQTT Veri Toplayıcı](Uygulama.exe)
 Aktivite içeriği olan "<uygulama adı>" uygulamasının geliştirme adımlarını içerir.
 
 ## Sensör Bağlanabilirliği ve MQTT
