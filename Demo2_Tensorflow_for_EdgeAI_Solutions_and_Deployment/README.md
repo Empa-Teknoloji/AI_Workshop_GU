@@ -12,7 +12,8 @@ Demo içeriği olan "El Karakteri Tanıma" uygulaması,  workshop için Empa Ele
 <img src="./Additionals/Hand-Characters.png" alt="Accelerator Workshops" width="800"/> 
 
 ## Uygulama
-### ↳ [Google Colab üzerinde STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma](https://colab.research.google.com/drive/1pfd_9qnLD5NGn-R2M1WAIx-leZCaGYzL)
+### ↳ [Google Colab üzerinde STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma (Tensorflow ile Convolutional Neural Network Model)](https://colab.research.google.com/drive/1pfd_9qnLD5NGn-R2M1WAIx-leZCaGYzL)
+### ↳ [Google Colab üzerinde STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma (Scikit-learn ile Random Forest Model)](https://colab.research.google.com/drive/1wO8M6MTk8_UzeAT46pLQzRjOGNvulkDJ)
 Demo içeriği olan "uçta yapay zeka" uygulamasının Google Colab üzerindeki geliştirme adımlarını içerir.
 
 ## ST Platformlarında Uçta Yapay Zeka
