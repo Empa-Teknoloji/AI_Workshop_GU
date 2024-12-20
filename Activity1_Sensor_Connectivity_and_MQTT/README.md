@@ -5,7 +5,7 @@
 
 # 1) Sensör Bağlanabilirliği ve MQTT
 Empa Electronics tarafından düzenlenen Accelerator Workshops serimizin "Gazi Üniversitesi Uçta Yapay Zeka Çalıştayı" adımına hoşgeldiniz.
-Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştilecek "<Uygulama Adı>" uygulamamızın geliştirme adımlarında size rehberlik edecektir.
+Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştilecek "Uçtan Uca MQTT Veri Toplayıcı" uygulamamızın geliştirme adımlarında size rehberlik edecektir.
 
 ## Kurulum
 Öncelikle, aşağıdaki bağlantıyı kullanarak çalışma ortamı kurulum adımlarını takip ediniz.
@@ -13,17 +13,17 @@ Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarl
 Aktivite için gerekli program ve gereçlerin kurulum adımlarını içerir.
 
 ## Uygulama
-### ↳ [<MQTT Uygulama Adı>](Uygulama.exe)
-Aktivite içeriği olan "<uygulama adı>" uygulamasının geliştirme adımlarını içerir.
+### ↳ [Uçtan Uca MQTT Veri Toplayıcı](Uygulama.md)
+Aktivite içeriği olan "Uçtan Uca MQTT Veri Toplayıcı" uygulamasının geliştirme adımlarını içerir.
 
 ## Sensör Bağlanabilirliği ve MQTT
 
 **Sensör Bağlanabilirliği**  
-<Uygulama İçeriği İçin Kısa Tanım>
+Sensör bağlanabilirliği, bir sistemin çevreden veri toplamasını ve bu verileri işleyebilmesini sağlayan temel bir özelliktir. IoT projelerinde, sensörlerin sisteme entegrasyonu genellikle analog ya da dijital veri çıkışlarına uygun arabirimler üzerinden gerçekleştirilir. Kullanılan platform, sensör verilerini gerçek zamanlı olarak okuyup işlemeye olanak sağlayacak ADC (Analog-Digital Converter), I2C, SPI gibi protokolleri destekler. Bu projede, sensörlerin sorunsuz bir şekilde bağlanabilmesi ve konfigürasyonlarının yapılabilmesi için STM32 HAL kütüphanelerinin sunduğu hazır fonksiyonlar kullanılmıştır. Sensör verilerinin doğru bir şekilde alınması ve işlenmesi, sistemin genel başarımını doğrudan etkileyen kritik bir adımdır.
 
 **MQTT Protokolü & AWS**  
-<Uygulama İçeriği İçin Kısa Tanım>
+MQTT (Message Queuing Telemetry Transport), IoT uygulamaları için geliştirilmiş, hafif yapısı ve düşük bant genişliği gereksinimi ile öne çıkan bir mesajlaşma protokolüdür. Bu protokol, sensör verilerinin bulut tabanlı platformlara hızlı ve güvenli bir şekilde iletilmesini sağlar. AWS IoT Core ile entegre edilen bir MQTT altyapısı, cihazdan buluta veri akışını kolaylaştırmakta ve bulut üzerinden alınan verilerin işlenip analiz edilmesine olanak tanımaktadır. Bu projede, AWS IoT Core servislerinin kullanımıyla MQTT protokolü üzerinden uç birimden alınan veriler güvenli bir şekilde AWS platformuna aktarılmış ve burada farklı analiz senaryolarına uygun iş akışları oluşturulmuştur.
 
 **Kaynaklar & Okuma Önerileri** 
 
-1- [<Öneri-1>](Öneri-link-1)
+1- [What is MQTT? - AWS](https://aws.amazon.com/what-is/mqtt/)
