@@ -13,7 +13,7 @@ Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarl
 Aktivite için gerekli program ve gereçlerin kurulum adımlarını içerir.
 
 ## Uygulama
-### ↳ [Uçtan Uca MQTT Veri Toplayıcı](Uygulama.md)
+### ↳ [Uçtan Uca MQTT Veri Toplayıcı](Project/README.md)
 Aktivite içeriği olan "Uçtan Uca MQTT Veri Toplayıcı" uygulamasının geliştirme adımlarını içerir.
 
 ## Sensör Bağlanabilirliği ve MQTT
